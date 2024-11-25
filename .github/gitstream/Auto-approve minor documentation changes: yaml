@@ -1,0 +1,5 @@
+rules:
+  - name: Auto-Approve Docs PRs
+    if: file_changed("docs/**")
+    then:
+      approve: true
