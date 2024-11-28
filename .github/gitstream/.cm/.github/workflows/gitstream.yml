@@ -1,1 +1,12 @@
-.github/workflows/gitstream.yml
+jobs:
+  gitStream:
+    timeout-minutes: 5
+    # uncomment this condition, if you don't want any automation on dependabot PRs
+
+    if: github.actor != 'dependabot[bot]'
+
+    runs-on: ubuntu-latest
+    name: gitStream workflow automation
+    steps:
+      - name: Evaluate Rules
+        uses: linear-b/gitstream-github-action@v2
