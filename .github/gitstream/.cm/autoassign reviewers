@@ -1,0 +1,5 @@
+rules:
+  - name: Assign Reviewers for Backend Changes
+    if: file_changed("backend/*")
+    then:
+      assign_reviewers: ["@reviewer1", "@reviewer2"]
